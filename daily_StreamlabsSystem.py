@@ -44,7 +44,7 @@ class Settings:
 
         else: #set variables if no custom settings file is found
             self.OnlyLive = False
-            self.Command = "!work"
+            self.Command = "!daily"
             self.Cost = 0
             self.Permission = "Everyone"
             self.PermissionInfo = ""
