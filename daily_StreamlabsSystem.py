@@ -51,7 +51,7 @@ class Settings:
             self.Usage = "Stream Chat"
             self.UseCD = True            
             self.UserCooldown = 86400
-            self.OnUserCooldown = "{0} the command is still on user cooldown for {1} seconds!"
+            self.OnUserCooldown = "{0} the command is still on user cooldown for {1} hour(s)!"
             self.CasterCD = True
             self.Timeout = False
             self.TL = 60
@@ -198,13 +198,13 @@ def IsOnCooldown(data):
             userCDD = Parent.GetUserCooldownDuration(ScriptName, MySet.Command, data.User)
 
             if cooldownDuration > userCDD:
-                m_CooldownRemaining = cooldownDuration
+                m_CooldownRemaining = cooldownDuration / 3600
 
                 message = MySet.OnCooldown.format(data.UserName, m_CooldownRemaining)
                 SendResp(data, message)
 
             else:
-                m_CooldownRemaining = userCDD
+                m_CooldownRemaining = userCDD / 3600
 
                 message = MySet.OnUserCooldown.format(data.UserName, m_CooldownRemaining)
                 SendResp(data, message)
