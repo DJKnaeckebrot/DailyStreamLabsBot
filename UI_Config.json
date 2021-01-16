@@ -54,8 +54,8 @@
       "Cooldown": {
       "type": "numberbox",
       "label": "Cooldown (seconds)",
-      "value": 1800,
-      "tooltip": "Cooldown in seconds.",
+      "value": 86.400,
+      "tooltip": "Cooldown in seconds (Default is 24h).",
       "group": "Cooldown"
     },
       "OnCooldown": {

@@ -50,7 +50,7 @@ class Settings:
             self.PermissionInfo = ""
             self.Usage = "Stream Chat"
             self.UseCD = True
-            self.Cooldown = 1800
+            self.Cooldown = 86.400
             self.OnCooldown = "{0} the command is still on cooldown for {1} seconds!"
             self.UserCooldown = 10
             self.OnUserCooldown = "{0} the command is still on user cooldown for {1} seconds!"
@@ -113,9 +113,11 @@ def Execute(data):
     """Required Execute data function"""
     if data.IsChatMessage() and data.GetParam(0).lower() == MySet.Command.lower():
 
+        # check if source is valid
         if not IsFromValidSource(data, MySet.Usage):
             return
 
+        # check is permissions are ok
         if not Parent.HasPermission(data.User, MySet.Permission, MySet.PermissionInfo):
             message = MySet.PermissionResponse.format(data.User, MySet.Permission, MySet.PermissionInfo)
             SendResp(data, message)
@@ -123,13 +125,17 @@ def Execute(data):
         if not HasPermission(data):
             return
 
+        # check for onlylive setting or if user is online
         if not MySet.OnlyLive or Parent.IsLive():
 
+            # reject on cooldown
             if IsOnCooldown(data):
                 return
-                                   
+
+            # Add daily rewards to user account             
             Parent.AddPoints(data.User, data.UserName, MySet.DailyRewards)
 
+            # output user balance
             userBalance = str(Parent.GetPoints(data.User))
             message = "Ich schenke dir " + MySet.DailyRewards " " + Parent.GetCurrencyName() + "! Du hast also " + userBalance + " " + Parent.GetCurrencyName() + " !"
 
