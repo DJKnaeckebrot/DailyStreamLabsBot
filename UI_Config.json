@@ -51,25 +51,11 @@
       "tooltip": "Enable/Disable cooldown messages",
       "group": "Cooldown"
     },
-      "Cooldown": {
-      "type": "numberbox",
-      "label": "Cooldown (seconds)",
-      "value": 86.400,
-      "tooltip": "Cooldown in seconds (Default is 24h).",
-      "group": "Cooldown"
-    },
-      "OnCooldown": {
-      "type": "textbox",
-      "value": "{0} the command is still on cooldown for {1} seconds!",
-      "label": "Cooldown Response",
-      "tooltip": "The message that the bot will display when the command is on cooldown. \r\n {0} = user \r\n {1} = time remaining",
-      "group": "Cooldown"
-    },
       "UserCooldown": {
       "type": "numberbox",
       "label": "User Cooldown (seconds)",
-      "value": 10,
-      "tooltip": "User cooldown in seconds.",
+      "value": 86400,
+      "tooltip": "User cooldown in seconds. (Default is 86400s = 24 h)",
       "group": "Cooldown"
     },
       "OnUserCooldown": {
@@ -99,13 +85,6 @@
       "value": 60,
       "tooltip": "Length for the timeout if users fail to fish",
       "group": "Outcomes"
-    },
-    "PermissionResponse": {
-      "type": "textbox",
-      "value": "{0} -> only {1} ({2}) and higher can use this command",
-      "label": "Permission denied response",
-      "tooltip": "Message sent when user doesn't select any valid wire. \r\n{0} = user \r\n{1} = permission\r\n{2} = permission info",
-      "group": "Responses"
     },
     "DailyRewards": {
       "type": "numberbox",

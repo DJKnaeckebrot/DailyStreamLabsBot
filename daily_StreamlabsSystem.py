@@ -49,14 +49,10 @@ class Settings:
             self.Permission = "Everyone"
             self.PermissionInfo = ""
             self.Usage = "Stream Chat"
-            self.UseCD = True
-            self.Cooldown = 86.400
-            self.OnCooldown = "{0} the command is still on cooldown for {1} seconds!"
-            self.UserCooldown = 10
+            self.UseCD = True            
+            self.UserCooldown = 86400
             self.OnUserCooldown = "{0} the command is still on user cooldown for {1} seconds!"
             self.CasterCD = True
-            self.NotEnoughResponse = "{0} you don't have enough {1} to attempt this! You will need atleast {2} {1}."
-            self.PermissionResponse = "{0} -> only {1} ({2}) and higher can use this command"
             self.Timeout = False
             self.TL = 60
             self.DailyRewards = 200
@@ -137,7 +133,7 @@ def Execute(data):
 
             # output user balance
             userBalance = str(Parent.GetPoints(data.User))
-            message = "Ich schenke dir " + MySet.DailyRewards + " " + Parent.GetCurrencyName() + "! Du hast also " + userBalance + " " + Parent.GetCurrencyName() + " !"
+            message = "Ich schenke dir " + str(MySet.DailyRewards) + " " + Parent.GetCurrencyName() + "! Du hast also " + userBalance + " " + Parent.GetCurrencyName() + " !"
 
             SendResp(data, message)
 
