@@ -60,8 +60,15 @@
     },
       "OnUserCooldown": {
       "type": "textbox",
-      "value": "{0} the command is still on user cooldown for {1} seconds!",
+      "value": "{0} the command is still on user cooldown for {1} hours!",
       "label": "User Cooldown Response",
+      "tooltip": "The message that the bot will display when the command is on user cooldown. \r\n {0} = user \r\n {1} = time remaining",
+      "group": "Cooldown"
+    },
+      "OnUserCooldownMinute": {
+      "type": "textbox",
+      "value": "{0} the command is still on user cooldown for {1} minutes!",
+      "label": "User Cooldown Response minutes",
       "tooltip": "The message that the bot will display when the command is on user cooldown. \r\n {0} = user \r\n {1} = time remaining",
       "group": "Cooldown"
     },
