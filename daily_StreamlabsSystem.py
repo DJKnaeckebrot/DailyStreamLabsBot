@@ -137,7 +137,7 @@ def Execute(data):
 
             # output user balance
             userBalance = str(Parent.GetPoints(data.User))
-            message = "Ich schenke dir " + MySet.DailyRewards " " + Parent.GetCurrencyName() + "! Du hast also " + userBalance + " " + Parent.GetCurrencyName() + " !"
+            message = "Ich schenke dir " + MySet.DailyRewards + " " + Parent.GetCurrencyName() + "! Du hast also " + userBalance + " " + Parent.GetCurrencyName() + " !"
 
             SendResp(data, message)
 
