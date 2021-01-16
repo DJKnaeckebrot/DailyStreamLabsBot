@@ -20,10 +20,10 @@ To trigger the bot use !daily in the chat
 ## V1.0
 
  - Enable/Disable using the command when the stream is offline
- - Enable/Disable cooldown / user cooldown
- - Enable/Disable cooldown / user cooldown messages
+ - Enable/Disable user cooldown
+ - Enable/Disable user cooldown messages
  - Customisable command name
  - Customisable permission for using the command
- - Customisable cooldown / user cooldown timers 
+ - Customisable user cooldown timers 
  - Customisable response messages
 
