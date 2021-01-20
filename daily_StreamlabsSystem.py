@@ -17,7 +17,7 @@ from array import *
 ScriptName = "Daily"
 Website = "https://github.com/mrdennis1212"
 Creator = "mrdennis1212"
-Version = "1.0"
+Version = "1.0.1"
 Description = "Daily command"
 #---------------------------------------
 # Versions
