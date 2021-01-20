@@ -2,7 +2,7 @@
 
 
 Name: Daily Streamlabs Bot  
-Version: 1.0  
+Version: 1.0.1 
 Creator: [mrdennis1212](https://github.com/mrdennis1212)  
 [Website](https://github.com/mrdennis1212/DailyStreamLabsBot)
 
@@ -17,6 +17,9 @@ To trigger the bot use !daily in the chat
 2. Enable the script in Streamlabs Chatbot Application  
 3. Modify the values of the script  
  
+## V1.0.1
+ - Minor Bug Fixes
+
 ## V1.0
 
  - Enable/Disable using the command when the stream is offline
