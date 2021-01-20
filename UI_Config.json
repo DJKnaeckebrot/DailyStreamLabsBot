@@ -79,6 +79,13 @@
       "tooltip": "Enable/Disable cooldown for caster",
       "group": "Cooldown"
     },
+    "ResponseMessage": {
+      "type": "textbox",
+      "value": "{0} ich schenke dir {1} {2}! Du hast also {3} {2}!",
+      "label": "Response message",
+      "tooltip": "The message that the bot will display when the command has been executed. \r\n {0} = user \r\n {1} = dailyrewards \r\n {2} = currency \r\n {3} = UserAccountpoints",
+      "group": "Response"
+    },
     "Timeout": {
       "type": "checkbox",
       "value": false,

@@ -53,6 +53,7 @@ class Settings:
             self.UserCooldown = 86400
             self.OnUserCooldown = "{0} the command is still on user cooldown for {1} hours!"
             self.OnUserCooldownMinute = "{0} the command is still on user cooldown for {1} minutes!"
+            self.ResponseMessage = "{0} ich schenke dir {1} {2}! Du hast also {3} {2}!"
             self.CasterCD = True
             self.Timeout = False
             self.TL = 60
@@ -134,7 +135,7 @@ def Execute(data):
 
             # output user balance
             userBalance = str(Parent.GetPoints(data.User))
-            message = "Ich schenke dir " + str(MySet.DailyRewards) + " " + Parent.GetCurrencyName() + "! Du hast also " + userBalance + " " + Parent.GetCurrencyName() + " !"
+            message = MySet.ResponseMessage.format(data.UserName, str(MySet.DailyRewards), Parent.GetCurrencyName(), userBalance)
 
             SendResp(data, message)
 
@@ -243,9 +244,9 @@ def IsFromValidSource(data, Usage):
 def AddCooldown(data):
     """add cooldowns"""
     if Parent.HasPermission(data.User, "Caster", "") and MySet.CasterCD:
-        Parent.AddCooldown(ScriptName, MySet.Command, MySet.Cooldown)
+        Parent.AddCooldown(ScriptName, MySet.Command, MySet.UserCooldown)
         return
 
     else:
         Parent.AddUserCooldown(ScriptName, MySet.Command, data.User, MySet.UserCooldown)
-        Parent.AddCooldown(ScriptName, MySet.Command, MySet.Cooldown)
+        # Parent.AddCooldown(ScriptName, MySet.Command, MySet.Cooldown)
